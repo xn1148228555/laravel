@@ -25,7 +25,10 @@ git clone 到本地<br>
 <p>http://localhost/oauth/token       post token</p>
 <p>http://localhost/api/user          get user</p>
 
-
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/1.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/2.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/3.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/4.png ></p>
 
 ## 有问题可以直接在教程下面留言
 
