@@ -43,22 +43,22 @@
                     {!! csrf_field() !!}
                     <input type="hidden" name="article_id" value="{{ $article->id }}">
                     <div class="form-group">
-                        <label>Nickname</label>
-                        <input type="text" name="nickname" class="form-control" style="width: 300px;" required="required">
+                        <label>名字</label>
+                        <input type="text" name="nickname" class="form-control" style="width: 300px;" required>
                     </div>
                     <div class="form-group">
-                        <label>Email address</label>
+                        <label>Email</label>
                         <input type="email" name="email" class="form-control" style="width: 300px;">
                     </div>
                     <div class="form-group">
-                        <label>Home page</label>
+                        <label>主页</label>
                         <input type="text" name="website" class="form-control" style="width: 300px;">
                     </div>
                     <div class="form-group">
-                        <label>Content</label>
-                        <textarea name="content" id="newFormContent" class="form-control" rows="10" required="required"></textarea>
+                        <label>内容</label>
+                        <textarea name="content" id="newFormContent" class="form-control" rows="10" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-lg btn-success col-lg-12">Submit</button>
+                    <button type="submit" class="btn btn-lg btn-success col-lg-12">评论</button>
                 </form>
             </div>
 

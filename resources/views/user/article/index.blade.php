@@ -25,11 +25,11 @@
                                 <hr>
                         <div class="article">
                             <h4>{{ $article->title }}</h4>
-                            <div class="content">
+                            <!--<div class="content">
                                 <p>
                                     {{ $article->body }}
                                 </p>
-                            </div>
+                            </div>-->
                         </div>
                         <a href="{{ url('user/article/'.$article->id.'/edit') }}" class="btn btn-success">编辑</a>
                         <form action="{{ url('user/article/'.$article->id) }}" method="POST" style="display: inline;">
@@ -40,9 +40,11 @@
                             @endif
                     @endforeach
 
-                </div>
+                </div>   {{ $articles->links() }} 
             </div>
         </div>
     </div>
-</div>  
+  
+</div>
 @endsection
+ 

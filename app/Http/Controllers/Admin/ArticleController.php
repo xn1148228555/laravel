@@ -11,8 +11,13 @@ class ArticleController extends Controller
         $this->middleware('auth.admin:admin');
     }
     public function index()
-    {
-        return view('admin/article/index')->withArticles(Article::all());
+    {$articles = \DB::table('articles')
+            ->orderBy('id', 'desc')
+
+            ->groupBy('id')
+            ->paginate(3);
+         return view('admin/article/index',['articles'=>$articles]);
+        //return view('admin/article/index')->withArticles(Article::all());
     }
 
     public function create()

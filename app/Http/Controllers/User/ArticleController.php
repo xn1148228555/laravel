@@ -8,8 +8,14 @@ use App\Category;
 class ArticleController extends Controller
 {
     public function index()
-    {
-        return view('user/article/index')->withArticles(Article::all());
+    {$articles = \DB::table('articles')
+            ->orderBy('id', 'desc')
+
+            ->groupBy('id')
+            ->paginate(3);
+         return view('user/article/index',['articles'=>$articles]);
+		
+       // return view('user/article/index')->withArticles(Article::all());
     }
 
     public function create()
