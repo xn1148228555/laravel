@@ -31,14 +31,11 @@ Route::group(['middleware' => 'auth', 'namespace' => 'User', 'prefix' => 'user']
 
 });
 
-Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function() {
-Route::get('/', 'AdminController@index');
-
-   
-});
+ 
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {
+	Route::get('/', 'AdminController@index');
     $router->get('login', 'LoginController@showLoginForm')->name('admin.login');
     $router->post('login', 'LoginController@login');
     $router->post('logout', 'LoginController@logout');
