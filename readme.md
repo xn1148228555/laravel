@@ -77,17 +77,6 @@ http://localhost/api/user          get user</td>
     </tr>   
 </tbody>
 </table>
-
- 
- 
-
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/1.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/2.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/3.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/4.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport1.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport1.png ></p>
-
 ## todo list
 <table>
 <thead>
@@ -119,6 +108,17 @@ http://localhost/api/user          get user</td>
     </tr>
 </tbody>
 </table>
+ 
+ 
+
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/1.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/2.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/3.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/4.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport1.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport1.png ></p>
+
+
 ## 有问题可以直接在教程下面留言
 
 喜欢可以点击上面右侧的 Star 哦
