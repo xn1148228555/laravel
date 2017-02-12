@@ -52,7 +52,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                        @if (!auth('admin'))
-                            <li><a href="{{ url('/login') }}">Login</a></li>  {{  auth('admin')->user()->name}} 
+                            <li><a href="{{ url('/login') }}">Login</a></li> 1 {{  auth('admin')->user()->name}} 
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
@@ -62,13 +62,13 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ url('/logout') }}"
+                                        <a href="{{ url('admin/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
 
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                        <form id="logout-form" action="{{ url('admin/logout') }}" method="get" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>

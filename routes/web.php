@@ -32,13 +32,12 @@ Route::group(['middleware' => 'auth', 'namespace' => 'User', 'prefix' => 'user']
 });
 
  
-
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {
 	Route::get('/', 'AdminController@index');
     $router->get('login', 'LoginController@showLoginForm')->name('admin.login');
     $router->post('login', 'LoginController@login');
-    $router->post('logout', 'LoginController@logout');
+     $router->get('logout', 'LoginController@logout');
 
     $router->get('dash', 'DashboardController@index');
 	//    管理文章
@@ -55,4 +54,11 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     //    管理用户
     Route::get('user', 'UserController@index');
     Route::resource('user', 'UserController');
+	Route::resource('register', 'RegisterController');
+  
+ 
 });
+
+ // 指定 auth 的 guard 为 新建的 admins   Route::group(['middleware' => ['auth:admin']], function () { 
+   // 登录成功才能访问的部分放在认证保护内     Route::get('/1', 'HomeControllera@index'); 
+  //  }); Admin::guard('admins')-> 替换 Auth:: 来指定 guard。

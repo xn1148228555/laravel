@@ -2,6 +2,8 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+ 
+use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 class LoginController extends Controller
 {
@@ -55,5 +57,10 @@ class LoginController extends Controller
     protected function guard()
     {
         return auth()->guard('admin');
+    }
+	    public function logout()
+    {
+       
+    return redirect('/');
     }
 }

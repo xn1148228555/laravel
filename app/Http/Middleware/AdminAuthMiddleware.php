@@ -23,4 +23,18 @@ class AdminAuthMiddleware
         }
         return $next($request);
     }
+	
+	/*未分表的多用户登录public function handle($request, Closure $next)
+{
+    if (!Auth::check()) {
+        return Redirect::route('login');
+    } else {
+        if (!Auth::user()->is_admin) {
+            session()->flash('message_warning', '您不是管理员！无法进入相关区域');
+            return Redirect::route('stu_home');
+        }
+    }
+    return $next($request);
+	}*/
+
 }
