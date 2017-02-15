@@ -394,6 +394,7 @@ class ComposerStaticInit36bd60b34e80b69d9a1dd716282c8f22
         'CreateCategoryTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_061020_create_category_table.php',
         'CreateCommentTable' => __DIR__ . '/../..' . '/database/migrations/2017_02_07_053343_create_comment_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreatePermissionsAndRoles' => __DIR__ . '/../..' . '/database/migrations/2017_02_13_075525_create_permissions_and_roles.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',

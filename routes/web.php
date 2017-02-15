@@ -55,7 +55,12 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     Route::get('user', 'UserController@index');
     Route::resource('user', 'UserController');
 	Route::resource('register', 'RegisterController');
-  
+	//权限管理
+	 Route::get('permission', 'PermissionController@index');
+  Route::resource('permission', 'PermissionController');
+    //角色管理
+    Route::get('role', 'RoleController@index');
+    Route::resource('role', 'RoleController');
  
 });
 
