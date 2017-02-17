@@ -1,40 +1,22 @@
 @extends('layouts.admin')
 @section('content')
-        <!--面包屑导航 开始-->
-<div class="crumb_warp">
-    <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
-    <i class="fa fa-home"></i> <a href="{{url('admin/info')}}">首页</a> &raquo; 全部分类
-</div>
-<!--面包屑导航 结束-->
-
-{{--<!--结果页快捷搜索框 开始-->--}}
-{{--<div class="search_wrap">--}}
-    {{--<form action="" method="post">--}}
-        {{--<table class="search_tab">--}}
-            {{--<tr>--}}
-                {{--<th width="120">选择分类:</th>--}}
-                {{--<td>--}}
-                    {{--<select onchange="javascript:location.href=this.value;">--}}
-                        {{--<option value="">全部</option>--}}
-                        {{--<option value="http://www.baidu.com">百度</option>--}}
-                        {{--<option value="http://www.sina.com">新浪</option>--}}
-                    {{--</select>--}}
-                {{--</td>--}}
-                {{--<th width="70">关键字:</th>--}}
-                {{--<td><input type="text" name="keywords" placeholder="关键字"></td>--}}
-                {{--<td><input type="submit" name="sub" value="查询"></td>--}}
-            {{--</tr>--}}
-        {{--</table>--}}
-    {{--</form>--}}
-{{--</div>--}}
-{{--<!--结果页快捷搜索框 结束-->--}}
+        <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        分类管理
+        <small>管理系统所有分类</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/admin"><i class="fa fa-dashboard"></i> home</a></li>
+        <li class="active">分类管理</li>
+    </ol>
+</section>
+<section class="content">
 
 <!--搜索结果页面 列表 开始-->
 <form action="#" method="post">
     <div class="result_wrap">
-        <div class="result_title">
-            <h3>分类管理</h3>
-        </div>
+
         <!--快捷导航 开始-->
         <div class="result_content">
             <div class="short_wrap">
@@ -78,7 +60,8 @@
 
         </div>
     </div>
-</form>
+   </form>
+ </section>
 <!--搜索结果页面 列表 结束-->
 
 <script>

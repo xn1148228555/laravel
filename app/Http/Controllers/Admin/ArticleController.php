@@ -15,7 +15,7 @@ class ArticleController extends Controller
             ->orderBy('id', 'desc')
 
             ->groupBy('id')
-            ->paginate(3);
+            ->paginate(25);
          return view('admin/article/index',['articles'=>$articles]);
         //return view('admin/article/index')->withArticles(Article::all());
     }

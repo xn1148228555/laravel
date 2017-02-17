@@ -53,7 +53,7 @@ class RegisterController extends Controller
         
         // 将数据保存到数据库，通过判断保存结果，控制页面进行不同跳转
         if ($admin->save()) {
-            return redirect('admin/article'); // 保存成功，跳转到 文章管理 页
+            return redirect('admin/adminuser'); // 保存成功，跳转到 文章管理 页
         } else {
             // 保存失败，跳回来路页面，保留用户的输入，并给出提示
             return redirect()->back()->withInput()->withErrors('保存失败！');

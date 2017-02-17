@@ -1,11 +1,22 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="container">
+        <!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        编辑文章
+        <small>编辑文章信息</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/admin"><i class="fa fa-dashboard"></i> home</a></li>
+        <li class="active">编辑文章</li>
+    </ol>
+</section>
+<section class="content">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">编辑文章</div>
+        <div class="col-xs-12">
+            <div class="box box-primary">
+
                 <div class="panel-body">
                     
                     @if (count($errors) > 0)
@@ -51,5 +62,5 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 @endsection

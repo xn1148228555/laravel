@@ -19,18 +19,22 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-    <link href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Styles -->
+    <link href="{{ url('/public/bootstrap-3.3.7-dist') }}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{{ url('/public/bootstrap-3.3.7-dist') }}/js/bootstrap.min.js"></script>
+
+    <!--<link href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
 
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+  <div id="app">
+      <nav class="navbar navbar-default navbar-static-top">
+          <div class="container">
+              <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
+                  <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>

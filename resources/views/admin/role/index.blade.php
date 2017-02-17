@@ -1,11 +1,17 @@
 @extends('layouts.admin')
 @section('title')角色管理@endsection
 @section('content')
+
+    <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
             角色管理
             <small>管理系统所有角色</small>
         </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin"><i class="fa fa-dashboard"></i> home</a></li>
+            <li class="active">角色管理</li>
+        </ol>
     </section>
     <section class="content">
         <div class="row">

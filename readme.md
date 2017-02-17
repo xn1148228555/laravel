@@ -111,10 +111,9 @@ http://localhost/api/user          get user</td>
  
  
 
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/1.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/2.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/3.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/4.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/adminlte.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/adminlte2.png ></p>
+ 
 <p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport1.png ></p>
 <p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport1.png ></p>
 

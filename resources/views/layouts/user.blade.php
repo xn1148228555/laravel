@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+
 
     <!-- Scripts -->
     <script>
@@ -19,9 +19,9 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-    <link href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Styles -->
+    <link href="{{ url('/public/bootstrap-3.3.7-dist') }}/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="{{ url('/public/bootstrap-3.3.7-dist') }}/js/bootstrap.min.js"></script>
 
 </head>
 <body>
