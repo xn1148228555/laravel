@@ -252,16 +252,28 @@
 
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu">
-                <li class="header">系统栏目</li>
+                <li class="header">管理菜单</li>
                 <!-- Optionally, you can add icons to the links -->
 
 
-
+                <li><a href="{{ url('admin') }}" ><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-circle-o"></i> <span>全局</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li> <a href="{{ url('admin/setting/website') }}" ><i class="fa fa-link"></i> <span>站点设置</span></a></li>
+                        <li> <a href="{{ url('admin/setting/email') }}" ><i class="fa fa-link"></i> <span>邮箱配置</span></a></li>
+                        <li> <a href="{{ url('admin/setting/time') }}" ><i class="fa fa-link"></i> <span>时间设置</span></a></li>
+                    </ul>
+                </li>
                 <li><a href="{{ url('admin/user') }}" ><i class="fa fa-link"></i> <span>会员管理</span></a></li>
 
 
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-link"></i> <span>系统权限</span>
+                    <a href="#"><i  class="fa fa-share"></i> <span>系统权限</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -271,10 +283,11 @@
                         <li> <a href="{{ url('admin/register') }}" ><i class="fa fa-link"></i> <span>添加管理</span></a></li>
                         <li> <a href="{{ url('admin/permission') }}" ><i class="fa fa-link"></i> <span>权限管理</span></a></li>
                         <li> <a href="{{ url('admin/role') }}" ><i class="fa fa-link"></i> <span>role管理</span></a></li>
+                        <li> <a href="{{ url('admin/modifypassword') }}" ><i class="fa fa-link"></i> <span>修改密码</span></a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="{{ url('admin/article') }}"><i class="fa fa-link"></i> <span>文章管理</span>
+                    <a href="{{ url('admin/article') }}"><i  class="fa fa-share"></i> <span>文章管理</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -285,6 +298,48 @@
                         <li><a href="{{ url('admin/category') }}" ><i class="fa fa-link"></i> <span>分类管理</span></a></li>
                     </ul>
                 </li>
+
+                <li class="header">常用菜单</li>
+                <li><a href="/" target="_blank"><i class="fa fa-circle-o text-success"></i> <span>网站首页</span></a></li>
+                <li><a href="{{ url('admin/tool') }}/clearCache"><i class="fa fa-circle-o text-info"></i> <span>清空缓存</span></a></li>
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-share"></i> <span>帮助</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o"></i> Level One
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                                <li>
+                                    <a href="#"><i class="fa fa-circle-o"></i> API
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                                    </a>
+                                    <ul class="treeview-menu">
+                                        <li><a href="#"><i class="fa fa-circle-o"></i> restful</a></li>
+                                        <li><a href="#"><i class="fa fa-circle-o"></i> client api</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+
             </ul>
             <!-- /.sidebar-menu -->
         </section>

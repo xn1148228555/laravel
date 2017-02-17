@@ -63,6 +63,14 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     //角色管理
     Route::get('role', 'RoleController@index');
     Route::resource('role', 'RoleController');
+    //tool
+
+    Route::get('tool/clearCache', 'ToolController@clearCache');
+    Route::post('tool/clearCache', 'ToolController@clearCache');
+    //修改密码
+    Route::any('modifypassword', 'ModifController@modify');
+    //全局
+    Route::any('setting/website', 'SettingController@website');
  
 });
 

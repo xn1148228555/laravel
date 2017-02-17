@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
- 
+
 use App\Http\Requests;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 class LoginController extends Controller
@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/admin/dash';
+    protected $redirectTo = '/admin';
     protected $username;
 
     /**
@@ -58,9 +58,16 @@ class LoginController extends Controller
     {
         return auth()->guard('admin');
     }
-	    public function logout()
+
+
+    /**
+     * 退出登录
+     * @return mixed
+     */
+    public function logout()
     {
-       
-    return redirect('/');
+        session(['admin'=>null]);
+        return redirect('admin/login');
+
     }
 }
