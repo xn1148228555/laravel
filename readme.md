@@ -115,7 +115,7 @@ http://localhost/api/user          get user</td>
 <p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/adminlte2.png ></p>
  
 <p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport1.png ></p>
-<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport1.png ></p>
+<p><img src=https://github.com/xiuhuai/laravel-ottcms/blob/master/help/passport2.png ></p>
 
 
 ## 有问题可以直接在教程下面留言
