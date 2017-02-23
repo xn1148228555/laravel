@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
     <meta charset="utf-8">
@@ -13,37 +12,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/dist/css/skins/_all-skins.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/plugins/iCheck/flat/blue.css">
-    <!-- Morris chart -->
-    <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/plugins/morris/morris.css">
-    <!-- jvectormap -->
-    <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/plugins/datepicker/datepicker3.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/plugins/daterangepicker/daterangepicker.css">
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="{{ url('/public/AdminLTE-master') }}/dist/googlecss.css">
     <!--Google字体-->
-     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="{{ url('/public/AdminLTE-master') }}/dist/html5shiv.min.js"></script>
-    <script src="{{ url('/public/AdminLTE-master') }}/dist/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('site.name', 'Laravel') }}</title>
 
     <script>
         window.Laravel =<?php echo json_encode([
@@ -51,11 +38,9 @@
         ]); ?>
     </script>
 </head>
-
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-    <!-- Main Header -->
     <header class="main-header">
 
         <!-- Logo -->
@@ -63,11 +48,11 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>后台</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>管理后台</b></span>
+            <span class="logo-lg"><b>管理后台</b>OTT</span>
         </a>
 
-        <!-- Header Navbar -->
-        <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
@@ -77,7 +62,6 @@
                 <ul class="nav navbar-nav">
                     <!-- Messages: style can be found in dropdown.less-->
                     <li class="dropdown messages-menu">
-                        <!-- Menu toggle button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-envelope-o"></i>
                             <span class="label label-success">4</span>
@@ -85,35 +69,76 @@
                         <ul class="dropdown-menu">
                             <li class="header">You have 4 messages</li>
                             <li>
-                                <!-- inner menu: contains the messages -->
+                                <!-- inner menu: contains the actual data -->
                                 <ul class="menu">
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-left">
-                                                <!-- User Image -->
                                                 <img src="{{ url('/public/AdminLTE-master') }}/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                             </div>
-                                            <!-- Message title and timestamp -->
                                             <h4>
                                                 Support Team
                                                 <small><i class="fa fa-clock-o"></i> 5 mins</small>
                                             </h4>
-                                            <!-- The message -->
                                             <p>Why not buy a new awesome theme?</p>
                                         </a>
                                     </li>
                                     <!-- end message -->
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{ url('/public/AdminLTE-master') }}/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                AdminLTE Design Team
+                                                <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{ url('/public/AdminLTE-master') }}/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Developers
+                                                <small><i class="fa fa-clock-o"></i> Today</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{ url('/public/AdminLTE-master') }}/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Sales Department
+                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="{{ url('/public/AdminLTE-master') }}/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Reviewers
+                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
                                 </ul>
-                                <!-- /.menu -->
                             </li>
                             <li class="footer"><a href="#">See All Messages</a></li>
                         </ul>
                     </li>
-                    <!-- /.messages-menu -->
-
-                    <!-- Notifications Menu -->
+                    <!-- Notifications: style can be found in dropdown.less -->
                     <li class="dropdown notifications-menu">
-                        <!-- Menu toggle button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
                             <span class="label label-warning">10</span>
@@ -121,22 +146,41 @@
                         <ul class="dropdown-menu">
                             <li class="header">You have 10 notifications</li>
                             <li>
-                                <!-- Inner Menu: contains the notifications -->
+                                <!-- inner menu: contains the actual data -->
                                 <ul class="menu">
-                                    <li><!-- start notification -->
+                                    <li>
                                         <a href="#">
                                             <i class="fa fa-users text-aqua"></i> 5 new members joined today
                                         </a>
                                     </li>
-                                    <!-- end notification -->
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                            page and may cause design problems
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-users text-red"></i> 5 new members joined
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-user text-red"></i> You changed your username
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="footer"><a href="#">View all</a></li>
                         </ul>
                     </li>
-                    <!-- Tasks Menu -->
+                    <!-- Tasks: style can be found in dropdown.less -->
                     <li class="dropdown tasks-menu">
-                        <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-flag-o"></i>
                             <span class="label label-danger">9</span>
@@ -144,20 +188,59 @@
                         <ul class="dropdown-menu">
                             <li class="header">You have 9 tasks</li>
                             <li>
-                                <!-- Inner menu: contains the tasks -->
+                                <!-- inner menu: contains the actual data -->
                                 <ul class="menu">
                                     <li><!-- Task item -->
                                         <a href="#">
-                                            <!-- Task title and progress text -->
                                             <h3>
                                                 Design some buttons
                                                 <small class="pull-right">20%</small>
                                             </h3>
-                                            <!-- The progress bar -->
                                             <div class="progress xs">
-                                                <!-- Change the css width attribute to simulate progress -->
                                                 <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                                                     <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Create a nice theme
+                                                <small class="pull-right">40%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Some task I need to do
+                                                <small class="pull-right">60%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">60% Complete</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- end task item -->
+                                    <li><!-- Task item -->
+                                        <a href="#">
+                                            <h3>
+                                                Make beautiful transitions
+                                                <small class="pull-right">80%</small>
+                                            </h3>
+                                            <div class="progress xs">
+                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                    <span class="sr-only">80% Complete</span>
                                                 </div>
                                             </div>
                                         </a>
@@ -170,17 +253,14 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- User Account Menu -->
+                    <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
-                        <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <!-- The user image in the navbar-->
                             <img src="{{ url('/public/AdminLTE-master') }}/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs">{{  auth('admin')->user()->name}} </span>
                         </a>
                         <ul class="dropdown-menu">
-                            <!-- The user image in the menu -->
+                            <!-- User image -->
                             <li class="user-header">
                                 <img src="{{ url('/public/AdminLTE-master') }}/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
@@ -221,249 +301,176 @@
                     </li>
                 </ul>
             </div>
+
         </nav>
     </header>
     <!-- Left side column. contains the logo and sidebar -->
     <aside class="main-sidebar">
-
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-
-            <!-- Sidebar user panel (optional) -->
+            <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
                     <img src="{{ url('/public/AdminLTE-master') }}/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>{{  auth('admin')->user()->name}} </p>
-                    <!-- Status -->
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <a href="#"><i class="fa fa-circle text-success"></i>在线</a>
                 </div>
             </div>
 
-            <!-- search form (Optional) -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-                </div>
-            </form>
-            <!-- /.search form -->
-
-            <!-- Sidebar Menu -->
+            <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">管理菜单</li>
-                <!-- Optionally, you can add icons to the links -->
-
-
-                <li><a href="{{ url('admin') }}" ><i class="fa fa-dashboard"></i> <span>首页</span></a></li>
                 <li class="treeview">
-                    <a href="#"><i class="fa fa-circle-o"></i> <span>全局</span>
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>常用菜单</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li> <a href="{{ url('admin/setting/website') }}" ><i class="fa fa-link"></i> <span>站点设置</span></a></li>
-                        <li> <a href="{{ url('admin/setting/email') }}" ><i class="fa fa-link"></i> <span>邮箱配置</span></a></li>
-                        <li> <a href="{{ url('admin/setting/time') }}" ><i class="fa fa-link"></i> <span>时间设置</span></a></li>
+                        <li><a href="/admin"><i  class="fa fa-circle-o"></i>后台首页</a></li>
+                        <li><a href="/" target="_blank"><i  class="fa fa-circle-o"></i>网站首页</a></li>
+                        <li><a href="{{ url('admin/tool') }}/clearCache"><i  class="fa fa-circle-o"></i>清空缓存</a></li>
+                        <li><a href="{{ url('admin') }}/help"><i  class="fa fa-circle-o"></i>HELP</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ url('admin/user') }}" ><i class="fa fa-link"></i> <span>会员管理</span></a></li>
-
-
-                <li class="treeview">
-                    <a href="#"><i  class="fa fa-share"></i> <span>系统权限</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li> <a href="{{ url('admin/admins') }}" ><i class="fa fa-link"></i> <span>管理员列表</span></a></li>
-                        <li> <a href="{{ url('admin/register') }}" ><i class="fa fa-link"></i> <span>添加管理</span></a></li>
-                        <li> <a href="{{ url('admin/permission') }}" ><i class="fa fa-link"></i> <span>权限管理</span></a></li>
-                        <li> <a href="{{ url('admin/role') }}" ><i class="fa fa-link"></i> <span>role管理</span></a></li>
-                        <li> <a href="{{ url('admin/modifypassword') }}" ><i class="fa fa-link"></i> <span>修改密码</span></a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#"><i  class="fa fa-share"></i> <span>文章管理</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li> <a href="{{ url('admin/article') }}" ><i class="fa fa-link"></i> <span>文章管理</span></a></li>
-                        <li> <a href="{{ url('admin/comment') }}"  ><i class="fa fa-link"></i> <span>评论管理</span></a></li>
-                        <li><a href="{{ url('admin/category') }}" ><i class="fa fa-link"></i> <span>分类管理</span></a></li>
-                    </ul>
-                </li>
-
-                <li class="header">常用菜单</li>
-                <li><a href="/" target="_blank"><i class="fa fa-circle-o text-success"></i> <span>网站首页</span></a></li>
-                <li><a href="{{ url('admin/tool') }}/clearCache"><i class="fa fa-circle-o text-info"></i> <span>清空缓存</span></a></li>
 
 
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-share"></i> <span>帮助</span>
+                        <i class="fa fa-pie-chart"></i>
+                        <span>全局</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                        <li>
-                            <a href="#"><i class="fa fa-circle-o"></i> Level One
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                                <li>
-                                    <a href="#"><i class="fa fa-circle-o"></i> API
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                                    </a>
-                                    <ul class="treeview-menu">
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> restful</a></li>
-                                        <li><a href="#"><i class="fa fa-circle-o"></i> client api</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
+                        <li > <a href="{{ url('admin/setting/website') }}" ><i class="fa fa-circle-o"></i>站点设置 to do list</a></li>
+                        <li> <a href="{{ url('admin/setting/email') }}" ><i class="fa fa-circle-o"></i>邮箱配置 to do list</a></li>
+                        <li> <a href="{{ url('admin/setting/time') }}" ><i class="fa fa-circle-o"></i>时间设置 to do list</a></li>
+                        <li><a href="admin/setting/irrigation"><i class="fa fa-circle-o"></i> 防灌水设置to do list</a></li>
+                        <li><a href="admin/setting/credits"><i class="fa fa-circle-o"></i> 积分设置to do list</a></li>
+                        <li><a href="admin/setting/seo"><i class="fa fa-circle-o"></i> SEO设置to do list</a></li>
+                        <li><a href="admin/system/index"><i class="fa fa-circle-o"></i> 系统工具to do list</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-laptop"></i>
+                        <span>系统权限</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        <li> <a href="{{ url('admin/admins') }}" ><i class="fa fa-circle-o"></i>管理员列表</a></li>
+                        <li> <a href="{{ url('admin/register') }}" ><i class="fa fa-circle-o"></i>添加管理</a></li>
+                        <li> <a href="{{ url('admin/permission') }}" ><i class="fa fa-circle-o"></i>权限管理</a></li>
+                        <li> <a href="{{ url('admin/role') }}" ><i class="fa fa-circle-o"></i>role管理</a></li>
+                        <li> <a href="{{ url('admin/modifypassword') }}" ><i class="fa fa-circle-o"></i>修改密码</a></li>
+
 
                     </ul>
                 </li>
 
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-users"></i> <span>用户</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu" id="manage_user">
+                        <li><a href="{{ url('admin/user') }}" ><i class="fa fa-circle-o"></i>会员管理</a></li>
+                        <li><a href="admin/authentication"><i class="fa fa-circle-o"></i> 专家管理 to do list</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-edit"></i> <span>内容</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li> <a href="{{ url('admin/article') }}" ><i class="fa fa-circle-o"></i>文章管理</a></li>
+                        <li> <a href="{{ url('admin/comment') }}"  ><i class="fa fa-circle-o"></i>评论管理</a></li>
+                        <li><a href="{{ url('admin/category') }}" ><i class="fa fa-circle-o"></i>分类管理</a></li>
+
+                        <li><a href="admin/question"><i class="fa fa-circle-o"></i>问题管理to do list</a></li>
+                        <li><a href="admin/answer"><i class="fa fa-circle-o"></i>回答管理to do list</a></li>
+                         <li><a href="admin/tag"><i class="fa fa-circle-o"></i>标签管理to do list</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-cutlery"></i> <span>运营 to do list</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu" id="operations">
+                        <li><a href="admin/notice"><i class="fa fa-circle-o"></i> 公告管理to do list</a></li>
+                        <li><a href="admin/recommendation"><i class="fa fa-circle-o"></i> 首页推荐to do list</a></li>
+                        <li><a href="admin/goods"><i class="fa fa-circle-o"></i> 积分商城to do list</a></li>
+                        <li><a href="admin/exchange"><i class="fa fa-circle-o"></i> 兑换记录to do list</a></li>
+                        <li><a href="admin/friendshipLink"><i class="fa fa-circle-o"></i> 友情链接to do list</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-recycle"></i> <span>第三方</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu" id="third_part">
+
+                        <li><a href="admin/setting/oauth"><i class="fa fa-circle-o"></i>一键登录to do list</a></li>
+                    </ul>
+                </li>
 
 
             </ul>
-            <!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-
-
-        <!-- Main content -->
         <section class="content">
-
-            @yield('content') <!-- Your Page Content Here -->
-
+            @yield('content')
         </section>
-        <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
 
-    <!-- Main Footer -->
     <footer class="main-footer">
-        <!-- To the right -->
         <div class="pull-right hidden-xs">
-            Anything you want
+            <b>Version</b> 5.491
         </div>
-        <!-- Default to the left -->
-        <strong>Copyright &copy; 2017 <a href="#">Company</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+        reserved.
     </footer>
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-            <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-            <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <!-- Home tab content -->
-            <div class="tab-pane active" id="control-sidebar-home-tab">
-                <h3 class="control-sidebar-heading">Recent Activity</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript:;">
-                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
-                            <div class="menu-info">
-                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                                <p>Will be 23 on April 24th</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-
-                <h3 class="control-sidebar-heading">Tasks Progress</h3>
-                <ul class="control-sidebar-menu">
-                    <li>
-                        <a href="javascript:;">
-                            <h4 class="control-sidebar-subheading">
-                                Custom Template Design
-                <span class="pull-right-container">
-                  <span class="label label-danger pull-right">70%</span>
-                </span>
-                            </h4>
-
-                            <div class="progress progress-xxs">
-                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.control-sidebar-menu -->
-
-            </div>
-            <!-- /.tab-pane -->
-            <!-- Stats tab content -->
-            <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-            <!-- /.tab-pane -->
-            <!-- Settings tab content -->
-            <div class="tab-pane" id="control-sidebar-settings-tab">
-                <form method="post">
-                    <h3 class="control-sidebar-heading">General Settings</h3>
-
-                    <div class="form-group">
-                        <label class="control-sidebar-subheading">
-                            Report panel usage
-                            <input type="checkbox" class="pull-right" checked>
-                        </label>
-
-                        <p>
-                            Some information about this general settings option
-                        </p>
-                    </div>
-                    <!-- /.form-group -->
-                </form>
-            </div>
-            <!-- /.tab-pane -->
-        </div>
-    </aside>
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
+
 </div>
 <!-- ./wrapper -->
-
-<!-- REQUIRED JS SCRIPTS -->
 
 <!-- jQuery 2.2.3 -->
 <script src="{{ url('/public/AdminLTE-master') }}/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="{{ url('/public/AdminLTE-master') }}/bootstrap/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+
 <!-- AdminLTE App -->
 <script src="{{ url('/public/AdminLTE-master') }}/dist/js/app.min.js"></script>
+<!-- Sparkline -->
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. Slimscroll is required when using the
-     fixed layout. -->
 </body>
 </html>

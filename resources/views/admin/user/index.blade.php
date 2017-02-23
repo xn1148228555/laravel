@@ -10,7 +10,7 @@
     </h1>
     <ol class="breadcrumb">
         <li><a href="/admin"><i class="fa fa-dashboard"></i> home</a></li>
-        <li class="active">会员管理</li>
+        <li>会员管理</li>
     </ol>
 </section>
 <section class="content">

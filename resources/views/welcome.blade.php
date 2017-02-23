@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="http://localhost/article">前台文章</a>  <a href="http://localhost/user">用户中心</a><a href="http://localhost/admin">管理后台</a>
+                    <a href="http://localhost/article">前台文章</a> <a href="http://localhost/shaixuan?price=all&color=all&metal=all">分类筛选</a>  <a href="http://localhost/user">用户中心</a><a href="http://localhost/admin">管理后台</a>
                  
                 </div>
             </div>
